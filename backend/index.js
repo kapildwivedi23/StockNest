@@ -18,7 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/allHoldings", async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
+  let allHoldings = await HoldingModel.find({});
   res.json(allHoldings);
 });
 
