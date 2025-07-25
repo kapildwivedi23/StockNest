@@ -1,146 +1,76 @@
-📈 StockNest
-StockNest is a modern stock portfolio and trading management system. It offers powerful analytics, seamless trading operations, and interactive performance visualizations through a sleek React dashboard and a RESTful backend API.
+# 📈 **StockNest**
 
-📚 Table of Contents
-✨ Features
+**StockNest** is a modern stock portfolio and trading management system. It offers powerful analytics, seamless trading operations, and interactive performance visualizations through a sleek React dashboard and a RESTful backend API.
 
-🛠 Tech Stack
+## **✨ Features**
+- Manage **stock holdings**, **positions**, and **trading orders**
+- RESTful **API** using **Node.js** and **Express**
+- **MongoDB** with **Mongoose ORM** for data persistence
+- Modern **React Dashboard** for portfolio visualization
+- Dynamic charts and graphs via **Chart.js** and **Material UI**
 
-📁 Project Structure
+## **🛠 Tech Stack**
+**Backend:** Node.js, Express, MongoDB, Mongoose  
+**Frontend:** React, Vite, Material UI, Chart.js, Axios  
+**Dev Tools:** dotenv, nodemon, ESLint
 
-🔌 Backend API
-
-🖥 Frontend/Dashboard
-
-🚀 Quick Start
-
-👨‍💻 Development
-
-📄 License
-
-✨ Features
-Manage stock holdings, positions, and trading orders.
-
-RESTful API using Node.js and Express.
-
-MongoDB with Mongoose ORM for data persistence.
-
-Modern React Dashboard for portfolio visualization.
-
-Dynamic charts and graphs via Chart.js and Material UI.
-
-🛠 Tech Stack
-Backend:
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-Frontend:
-
-React + Vite
-
-Material UI
-
-Chart.js
-
-Axios
-
-Dev Tools:
-
-dotenv
-
-nodemon
-
-ESLint
-
-📁 Project Structure
-bash
-Copy
-Edit
+## **📁 Project Structure**
+```
 stocknest/
-├── backend/          # REST API (Express, MongoDB)
-├── dashboard/        # Main React Dashboard (Vite + MUI)
-└── frontend/         # Optional/Experimental React Frontend
-🔌 Backend API
-Located in backend/index.js, the following endpoints are available:
+├── backend/       # REST API
+├── dashboard/     # React Dashboard
+└── frontend/      # Optional/Experimental UI
+```
 
-Method	Endpoint	Description
-GET	/allHoldings	Fetch all stock holdings
-GET	/allPositions	Fetch all trading positions
-POST	/newOrder	Place a new order (name, qty, price)
-GET	/addHolding	Seed demo holdings data
-GET	/addPositions	Seed demo positions data
+## **🔌 Backend API**
+| **Method** | **Endpoint**      | **Description**                             |
+|-----------|-------------------|---------------------------------------------|
+| GET       | `/allHoldings`    | Fetch all stock holdings                    |
+| GET       | `/allPositions`   | Fetch all trading positions                 |
+| POST      | `/newOrder`       | Place a new order (`name`, `qty`, `price`)  |
+| GET       | `/addHolding`     | Seed demo holdings data                     |
+| GET       | `/addPositions`   | Seed demo positions data                    |
 
-MongoDB Models
-Holding
+**Models:** `Holding`, `Order`, `Position` (Mongoose + MongoDB)
 
-Order
+## **🖥 Frontend/Dashboard**
+Located in `dashboard/`, the main React app is built using:
+- **React + Vite**
+- **Material UI** components
+- **Chart.js** for data visualization
 
-Position
+> `frontend/` is optional or for experimentation.
 
-These models are defined using Mongoose and map directly to MongoDB collections.
+## **🚀 Quick Start**
 
-🖥 Frontend/Dashboard
-The dashboard/ folder contains the main user-facing React app:
-
-Built with React + Vite for fast development.
-
-Uses Material UI for UI components.
-
-Visualizes data using Chart.js.
-
-The frontend/ folder is optional or for additional UI experiments.
-
-🚀 Quick Start
-🔧 Run Backend
-bash
-Copy
-Edit
+### Backend
+```bash
 cd backend
 npm install
 npm start
-Make sure you have a .env file in backend/ with:
-
-env
-Copy
-Edit
+```
+`.env` file required:
+```
 PORT=3002
 MONGO_URI=mongodb://localhost:27017/stocknest
-💻 Run Dashboard
-bash
-Copy
-Edit
+```
+
+### Dashboard
+```bash
 cd dashboard
 npm install
 npm run dev
-💡 Run Frontend (Optional)
-bash
-Copy
-Edit
+```
+
+### Optional Frontend
+```bash
 cd frontend
 npm install
 npm run dev
-👨‍💻 Development
-Clone the repository:
+```
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/stocknest.git
-Install dependencies for backend/, dashboard/, and optionally frontend/.
-
-Set up environment variables in .env file for backend.
-
-Start backend and frontend separately in two terminals.
-
-Use the dashboard to:
-
-View real-time holdings and positions.
-
-Place stock orders.
-
-Analyze your portfolio with visual insights.
-
+## **👨‍💻 Development**
+- Clone the repo:  
+  `git clone https://github.com/your-username/stocknest.git`
+- Install dependencies in `backend/`, `dashboard/`, (and `frontend/` if needed)
+- Setup `.env`
