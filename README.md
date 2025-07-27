@@ -71,6 +71,6 @@ npm run dev
 
 ## **👨‍💻 Development**
 - Clone the repo:  
-  `git clone https://github.com/your-username/stocknest.git`
+  `git clone https://github.com/kapildwivedi23/stocknest.git`
 - Install dependencies in `backend/`, `dashboard/`, (and `frontend/` if needed)
 - Setup `.env`
