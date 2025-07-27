@@ -7,12 +7,14 @@ import OtherApps from "./OtherApps";
 import Holdings from "./Holdings.jsx";
 import WatchList from "./WatchList.jsx";
 import Positions from "./Positions.jsx";
-// import { GeneralContextProvider } from ".GeneralContextProvider"; // Add correct path if needed
+import { GeneralContextProvider } from "./GeneralContext.jsx"; // Add correct path if needed
 
 const Dashboard = () => {
     return (
         <div className="dashboard-container">
-            <WatchList/>
+            <GeneralContextProvider>
+                <WatchList />
+            </GeneralContextProvider>,
             <div className="content">
                 <Routes>
                     <Route exact path="/" element={<Summary />} />
